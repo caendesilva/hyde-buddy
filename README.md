@@ -24,11 +24,15 @@ a local development tool that must be able to communicate with the HydeCLI and f
 
 ## System Requirements
 
-- PHP 8.0 or higher
-- A JavaScript enabled browser
 - Desktop or laptop device capable of running PHP application servers
 - Monitor with a minimum resolution of 720p. 1080p or higher is recommended
 - Composer (when installing from source)
+
+If you are running Buddy as a local web service you also need the following:
+- PHP 8.0 or higher
+- A JavaScript enabled browser
+
+Buddy Desktop comes bundled with PHP 8.1 and Chromium.
 
 ## Warning ⚠
 
