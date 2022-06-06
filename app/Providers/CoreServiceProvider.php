@@ -40,5 +40,10 @@ class CoreServiceProvider extends ServiceProvider
         if (! file_exists($this->app->make('homePath') . '\\database\\database.sqlite')) {
             touch($this->app->make('homePath') . '\\database\\database.sqlite');
         }
+
+        // Check that the home path exists
+        if (realpath($this->app->make('homePath')) === false) {
+            throw new \Exception('Something went wrong while booting the core service provider.');
+        }
     }
 }
