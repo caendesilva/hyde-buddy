@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Application Debug Screen</h1>
-	
+
 	<section>
 		<h2>Server information</h2>
 		<dl>
@@ -40,6 +40,20 @@
 
 			<dt>Database Name</dt>
 			<dd>{{ config('database.connections.'.config('database.default').'.database') }}</dd>
+		</dl>
+	</section>
+
+	<section>
+		<h2>Application configuration</h2>
+		<dl>
+			<dt>Application Name</dt>
+			<dd>{{ config('app.name') }}</dd>
+
+			<dt>Application Environment</dt>
+			<dd>{{ config('app.env') }}</dd>
+
+			<dt>Application Debug</dt>
+			<dd>{{ config('app.debug') }}</dd>
 		</dl>
 	</section>
 </body>
