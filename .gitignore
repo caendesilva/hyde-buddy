@@ -12,8 +12,3 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/.build
-/bin/build
-
-# The project configuration file. You may want to store this in VCS.
-storage/project.json

@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => 'Hyde Buddy',
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -190,8 +190,10 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\BuddyServiceProvider::class,
 
     ],
 
@@ -207,7 +209,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'Buddy' => App\Core\BuddyFacade::class,
+        // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
 ];
