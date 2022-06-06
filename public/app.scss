@@ -1,5 +1,14 @@
 @use '_utilities.scss';
 
+body {
+    font-family: sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 form {
     width: fit-content;
     label {
