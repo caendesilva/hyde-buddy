@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('projects', ProjectController::class);
+
 Route::get('/debug', DebugController::class);
