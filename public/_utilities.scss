@@ -1,0 +1,22 @@
+// Text utilities
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+// Margin and spacing utilities
+.ml-auto {margin-left: auto;}
+.mr-auto {margin-right: auto;}
+.mx-auto {margin-left: auto; margin-right: auto;}
+
+// Display utilities
+.block {display: block;}
+.inline {display: inline;}
+.flex {display: flex;}
+
+// Flexbox utilities
+.flex-row {flex-direction: row;}
+.flex-column {flex-direction: column;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-nowrap {flex-wrap: nowrap;}
+.justify-between {justify-content: space-between;}
+.items-center {align-items: center;}
