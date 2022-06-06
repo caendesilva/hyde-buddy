@@ -8,6 +8,14 @@
 </head>
 <body>
 	<h1>Application Debug Screen</h1>
+	
+	<section>
+		<h2>Core information</h2>
+		<dl>
+			<dt>Configuration home directory</dt>
+			<dd>{{ app('homePath') }}</dd>
+		</dl>
+	</section>
 
 	<section>
 		<h2>Server information</h2>
