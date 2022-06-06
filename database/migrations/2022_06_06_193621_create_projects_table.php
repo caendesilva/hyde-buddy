@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('path');
+            $table->string('label')->nullable();
+            $table->boolean('is_active')->default(false);
         });
     }
 
