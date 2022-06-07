@@ -45,6 +45,16 @@ class ProjectController extends Controller
         if (realpath(rtrim($request->get('path'), '\\/') . '/hyde') === false) {
             return back()->withErrors(['path' => 'Could not find a Hyde project at the specified path.']);
         }
+
+        // Create the project
+        $project = Project::create([
+            'path' => $request->get('path'),
+            'label' => $request->get('label') ?? basename($request->get('path')),
+            'is_active' => true,
+        ]);
+
+        // Redirect to the project
+        return redirect()->route('dashboard', $project)->with('success', 'Project created successfully.');
     }
 
     /**
