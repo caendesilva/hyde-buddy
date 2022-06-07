@@ -46,7 +46,10 @@ class SetupController extends Controller
 
         return redirect()->route('welcome')->with('success', 'Setup complete!');
     }
-    
+
+    /**
+     * @deprecated use the CoreServiceProvider binding instead
+     */
     public static function isSetup()
     {
         return file_exists(app()->make('homePath') . '\\database\\.initialized');
