@@ -186,6 +186,7 @@ return [
         /*
          * Package Service Providers...
          */
+        App\Providers\HydeServiceProvider::class,
 
         /*
          * Application Service Providers...
