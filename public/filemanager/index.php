@@ -75,6 +75,11 @@ $default_timezone = 'Etc/UTC'; // UTC
 // use absolute path of directory i.e: '/var/www/folder' or $_SERVER['DOCUMENT_ROOT'].'/folder'
 $root_path = $_SERVER['DOCUMENT_ROOT'];
 
+// Try to get the Hyde project root path
+if (file_exists(getenv('HOMEDRIVE') . getenv('HOMEPATH').'\.hyde-buddy\\database\\activeProject')) {
+    $root_path = file_get_contents(getenv('HOMEDRIVE') . getenv('HOMEPATH').'\.hyde-buddy\\database\\activeProject');
+}
+
 // Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
 // Will not working if $root_path will be outside of server document root
 $root_url = '';
