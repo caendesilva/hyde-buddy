@@ -82,7 +82,7 @@ if (file_exists(getenv('HOMEDRIVE') . getenv('HOMEPATH').'\.hyde-buddy\\database
 
 // Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
 // Will not working if $root_path will be outside of server document root
-$root_url = '_project';
+$root_url = 'api/_project';
 
 // Server hostname. Can set manually if wrong
 $http_host = $_SERVER['HTTP_HOST'];
