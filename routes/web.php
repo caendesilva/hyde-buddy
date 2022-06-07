@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DebugController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SetupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,9 @@ use App\Http\Controllers\ProjectController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/setup', SetupController::class)->name('setup');
+Route::post('/setup', [SetupController::class, 'setup']);
 
 Route::resource('projects', ProjectController::class);
 
