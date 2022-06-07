@@ -21,7 +21,7 @@
 					<a href="{{ route('api.filesystem.open', ['path' => $project->path]) }}">Windows Explorer</a>
 				</td>
 				<td>
-					<a href="/filemanager/index.php" target="_bland">Buddy File Manager</a>
+					<a href="/filemanager/index.php" target="_blank">Buddy File Manager</a>
 				</td>
 			</tr>
 		</tbody>
