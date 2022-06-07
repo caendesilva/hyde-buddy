@@ -16,6 +16,11 @@ class SetupController extends Controller
      */
     public function __invoke(Request $request)
     {
+        // Check if the application is already setup
+        if (SetupController::isSetup()) {
+            return redirect()->route('dashboard');
+        }
+
         return view('setup');
     }
 
