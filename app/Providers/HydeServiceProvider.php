@@ -13,6 +13,8 @@ class HydeServiceProvider extends \Hyde\Framework\HydeServiceProvider
             return;
         }
 
+        Hyde::setBasePath(file_get_contents($this->app->make('homePath') . '\\database\\activeProject'));
+
         parent::register();
     }
 }
