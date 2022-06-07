@@ -2,6 +2,20 @@
 //Default Configuration
 $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":false,"calc_folder":false,"theme":"light"}';
 
+/**
+ * NOTE FROM HYDEPHP CREATOR:
+ * I am aware that this file manager contains several security vulnerabilities.
+ * (Example: https://github.com/advisories/GHSA-2p5c-r4xc-mhvw)
+ * 
+ * However, these vulnerabilities seem to be related cases where outside users
+ * can access the file manager and execute arbitrary code. Since Buddy should
+ * NEVER be accessible on the internet, (and the application itself gives
+ * full shell access), I think it is okay to use it here. Though I 
+ * would not endorse the package use in production/internet
+ * enabled systems.
+ * 
+ * See https://github.com/prasathmani/tinyfilemanager/issues?q=security
+ */
 
 /**
  * H3K | Tiny File Manager V2.4.7
