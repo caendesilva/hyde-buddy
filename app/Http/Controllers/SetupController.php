@@ -40,7 +40,7 @@ class SetupController extends Controller
             throw $th;
         }
 
-        return redirect()->route('welcome')->with('toast', 'Setup complete!');
+        return redirect()->route('welcome')->with('success', 'Setup complete!');
     }
 
     
