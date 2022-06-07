@@ -41,19 +41,8 @@
                     @error('name')
                     <label for="name"><strong>Error:</strong> {{ $message }}</label>
                     @enderror
-                </div>
-                <div class="m-small">
-                    <p>
-                       <small><strong>Quick warning: </strong><b>The Hyde Buddy software is incredibly much in alpha</b>. While I'm really excited that you want to try it out,
-                        please know that <b>there will be bugs</b> and usage of this software is at your own risk and is subject to the 
-                        <a href="https://github.com/hydephp/hyde/blob/master/LICENSE.md" target="_blank">the MIT License agreement</a></small>
-                    </p>
-                    <label class="inline">
-                        <input required type="checkbox" name="terms" id="terms" @checked(old('terms')) />
-                        <small>I understand that I am using this software at my own risk and would like to continue.</small>
-                    </label>
-                   
-                    <div class="inline text-right">
+                      
+                    <div class="m-small text-right">
                         <input type="submit">
                     </div>
                 </div>
