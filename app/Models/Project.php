@@ -12,6 +12,21 @@ class Project extends Model
         'is_active',
     ];
 
+    public function getPathAttribute($value)
+    {
+        return realpath($value);
+    }
+
+    public function getLabelAttribute($value)
+    {
+        return $value ?: basename($this->path);
+    }
+
+    public function getIsActiveAttribute($value)
+    {
+        return $value ? true : false;
+    }
+
     public function setActive()
     {
         $this->is_active = true;
