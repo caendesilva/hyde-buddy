@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DebugController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SetupController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
+Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
 Route::get('/setup', SetupController::class)->name('setup');
 Route::post('/setup', [SetupController::class, 'setup']);
