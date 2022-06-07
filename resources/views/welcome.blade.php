@@ -3,7 +3,12 @@
 
     <h1 class="text-center m-large">Welcome to Hyde Buddy!</h1>
 
-    @if(! Project::count())
+    @if(Project::count())
+    <header class="text-center m-large">
+        <h2>Buddy is set up and ready to go!</h2>
+        <a href="{{ route('dashboard') }}" class="btn btn-success me-2">Go to Dashboard</a>
+    </header>
+    @else
     <section>
         <header class="text-center m-large">
             <h2>Could not find any projects. Let's get one set up!</h2>
