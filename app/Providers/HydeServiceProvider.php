@@ -21,7 +21,6 @@ class HydeServiceProvider extends \Hyde\Framework\HydeServiceProvider
         }
 
         Hyde::setBasePath(file_get_contents($this->app->make('homePath') . '\\database\\activeProject'));
-
         /**
          * @deprecated
          */
@@ -56,7 +55,14 @@ class HydeServiceProvider extends \Hyde\Framework\HydeServiceProvider
         $this->storeCompiledSiteIn(config(
             'hyde.site_output_path', Hyde::path('_site')
         ));
+
     }
 
+
+    public function boot(): void
+    {
+        config(['hyde.create_default_directories' => false]);
+        parent::boot();
+    }
 
 }
