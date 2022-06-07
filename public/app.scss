@@ -19,3 +19,16 @@ form {
         margin-bottom: 1rem;
     }
 }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    th,
+    td {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #ccc;
+    }
+    caption {
+        margin-bottom: 0.5rem;
+    }
+}

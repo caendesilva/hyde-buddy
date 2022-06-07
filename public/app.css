@@ -108,4 +108,17 @@ form fieldset {
   margin-bottom: 1rem;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table th,
+table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+}
+table caption {
+  margin-bottom: 0.5rem;
+}
+
 /*# sourceMappingURL=app.css.map */
