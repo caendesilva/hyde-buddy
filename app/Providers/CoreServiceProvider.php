@@ -17,6 +17,11 @@ class CoreServiceProvider extends ServiceProvider
         $this->app->bind('homePath', function () {
             return getenv('HOMEDRIVE') . getenv('HOMEPATH').'\.hyde-buddy';
         });
+
+        // Bind the setup status
+        $this->app->bind('isSetup', function () {
+            return file_exists(app()->make('homePath') . '\\database\\.initialized');
+        });
     }
 
     /**
