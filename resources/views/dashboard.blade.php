@@ -10,7 +10,7 @@
 			<tr>
 				<th>Project Name</th>
 				<th>Project Path</th>
-				<th>Actions</th>
+				<th colspan="2">Open project directory in</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -18,7 +18,10 @@
 				<td>{{$project->label}}</td>
 				<td>{{$project->path}}</td>
 				<td>
-					<a href="{{ route('api.filesystem.open', ['path' => $project->path]) }}">Open in explorer</a>
+					<a href="{{ route('api.filesystem.open', ['path' => $project->path]) }}">Windows Explorer</a>
+				</td>
+				<td>
+					<a href="/filemanager/index.php" target="_bland">Buddy File Manager</a>
 				</td>
 			</tr>
 		</tbody>
