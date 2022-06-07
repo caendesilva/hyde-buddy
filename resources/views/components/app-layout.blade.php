@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hyde Buddy {{ isset($title) ? " - $title" : '' }}</title>
     <link rel="stylesheet" href="{{ asset('app.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/nprogress.min.css') }}">
+    <script src="{{ asset('vendor/nprogress.min.js') }}"></script>
 </head>
 <body>
+    <script>NProgress.configure({ showSpinner: false });NProgress.start();</script>
     <main>
         {{ $slot }}
     </main>
@@ -21,5 +24,6 @@
             }
         });
     </script>
+    <script>NProgress.done();</script>
 </body>
 </html>
