@@ -9,7 +9,7 @@ class HydeServiceProvider extends \Hyde\Framework\HydeServiceProvider
 {
     public function register(): void
     {
-        if (! $this->app->make('isSetup')) {
+        if (! $this->app->make('isSetup') || ! $this->app->make('hasActiveProject')) {
             return;
         }
 
