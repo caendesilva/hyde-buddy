@@ -18,7 +18,7 @@ use App\Http\Controllers\SetupController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/setup', SetupController::class)->name('setup');
 Route::post('/setup', [SetupController::class, 'setup']);
