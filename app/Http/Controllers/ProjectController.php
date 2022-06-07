@@ -35,7 +35,16 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the request to prevent any syntax or type errors
+        $this->validate($request, [
+            'path' => 'required|string',
+            'label' => 'nullable|string',
+        ]);
+
+        // Validate the path belongs to a Hyde project
+        if (realpath(rtrim($request->get('path'), '\\/') . '/hyde') === false) {
+            return back()->withErrors(['path' => 'Could not find a Hyde project at the specified path.']);
+        }
     }
 
     /**
