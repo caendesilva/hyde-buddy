@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('filesystem/open', [\App\Http\Controllers\Api\SystemController::class, 'openFile'])->name('api.filesystem.open');
+
+Route::get('filesystem/get/{path}', \App\Http\Controllers\Api\ProjectFileProxyController::class)->where('path', '.*');
