@@ -11,5 +11,15 @@
     <main>
         {{ $slot }}
     </main>
+    <script>
+        // Core scripts and polyfills for the Chromium embedded browser.
+
+        // Refresh the page on CTRL+R
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'r' && e.ctrlKey) {
+                window.location.reload();
+            }
+        });
+    </script>
 </body>
 </html>
