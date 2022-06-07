@@ -12,6 +12,17 @@ class Project extends Model
         'is_active',
     ];
 
+    protected static function booted()
+    {
+        static::retrieved(function ($project) {
+            if ($project->is_active) {
+                // We save the active project to file so that we can determine if we have an active project
+                // when we boot the application, as we do not have access to the database and cache drivers.
+                file_put_contents(app('databasePath') . '/activeProject', $project->path);
+            }
+        });
+    }
+
     public function getPathAttribute($value)
     {
         return realpath($value);
