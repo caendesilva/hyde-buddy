@@ -33,7 +33,6 @@ class SetupController extends Controller
             // Test the connection
             DB::table('migrations')->count();
 
-
             // Set the initialized state
             touch(app()->make('homePath') . '\\database\\.initialized');
         } catch (\Throwable $th) {
@@ -47,7 +46,6 @@ class SetupController extends Controller
 
         return redirect()->route('welcome')->with('success', 'Setup complete!');
     }
-
     
     public static function isSetup()
     {
