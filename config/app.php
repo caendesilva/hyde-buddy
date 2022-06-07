@@ -184,6 +184,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Core System Service Providers...
+         */
+        App\Providers\CoreServiceProvider::class,
+
+        /*
          * Package Service Providers...
          */
         App\Providers\HydeServiceProvider::class,
@@ -197,7 +202,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        App\Providers\CoreServiceProvider::class,
     ],
 
     /*
