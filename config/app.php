@@ -197,7 +197,6 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\CoreServiceProvider::class,
-        App\Providers\MigrationServiceProvider::class,
     ],
 
     /*
